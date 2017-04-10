@@ -6,18 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'Local Market';
+var TabComponent = (function () {
+    function TabComponent() {
+        this.name = 'Local Market tab-bottom';
     }
-    return AppComponent;
+    return TabComponent;
 }());
-AppComponent = __decorate([
+TabComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        templateUrl: './app.component.html',
-        styleUrls: ['./app.component.css']
+        selector: 'comp-tab',
+        templateUrl: './tab.html',
+        styleUrls: ['./tab.css']
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], TabComponent);
+exports.TabComponent = TabComponent;
+//# sourceMappingURL=tab.js.map

@@ -7,7 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
+var tab_1 = require("./components/tab/tab");
+var test_component_1 = require("./controllers/test.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -15,8 +18,25 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent],
+        imports: [
+            platform_browser_1.BrowserModule,
+            router_1.RouterModule.forRoot([
+                {
+                    path: 'test',
+                    component: test_component_1.TestComponent
+                },
+                {
+                    path: '',
+                    redirectTo: '/test',
+                    pathMatch: 'full'
+                }
+            ])
+        ],
+        declarations: [
+            app_component_1.AppComponent,
+            tab_1.TabComponent,
+            test_component_1.TestComponent
+        ],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
