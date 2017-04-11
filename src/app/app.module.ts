@@ -1,31 +1,28 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule }   from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { TabComponent } from './components/tab/tab';
 import { TestComponent } from './controllers/test.component';
+import { Buyer } from './controllers/buyerPage/buyer';
+
+import { routes } from './app.routes';
 
 @NgModule({
-  imports:      [
-    BrowserModule,
-    RouterModule.forRoot([
-      {
-        path: 'test',
-        component: TestComponent
-      },
-      {
-        path: '',
-        redirectTo: '/test',
-        pathMatch: 'full'
-      }
-    ])
-  ],
+  imports: [
+    HttpModule, BrowserModule, FormsModule,
+    RouterModule.forRoot(routes),
+   ],
   declarations: [
     AppComponent,
     TabComponent,
-    TestComponent
+    TestComponent,
+    Buyer
   ],
-  bootstrap:    [ AppComponent ]
+  bootstrap: [ AppComponent ]
 })
+
 export class AppModule { }
