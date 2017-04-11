@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"for",
+				"forRoot\tmethod"
+			],
+			[
 				"top",
 				"topbar"
 			],
@@ -91,25 +95,34 @@
 			"file": "src/app/app.component.ts",
 			"settings":
 			{
-				"buffer_size": 174,
+				"buffer_size": 212,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/app/app.component.js",
-			"settings":
-			{
-				"buffer_size": 988,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/app/app.component.html",
+			"file": "src/app/app.component.css",
 			"settings":
 			{
 				"buffer_size": 31,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/components/tab/tab.html",
+			"settings":
+			{
+				"buffer_size": 38,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/components/tab/tab.ts",
+			"settings":
+			{
+				"buffer_size": 205,
 				"line_ending": "Unix"
 			}
 		}
@@ -153,11 +166,21 @@
 		"/Users/apple/vagrant/locmak/quickstart",
 		"/Users/apple/vagrant/locmak/quickstart/src",
 		"/Users/apple/vagrant/locmak/quickstart/src/app",
-		"/Users/apple/vagrant/locmak/quickstart/src/app/components"
+		"/Users/apple/vagrant/locmak/quickstart/src/app/components",
+		"/Users/apple/vagrant/locmak/quickstart/src/app/components/tab",
+		"/Users/apple/vagrant/locmak/quickstart/src/app/controllers"
 	],
 	"file_history":
 	[
+		"/Users/apple/vagrant/locmak/quickstart/src/app/components/tab/tab.ts",
+		"/Users/apple/vagrant/locmak/quickstart/src/app/app.module.ts",
+		"/Users/apple/vagrant/locmak/quickstart/.gitignore",
+		"/Users/apple/vagrant/locmak/quickstart/src/app/controllers/test.component.ts",
+		"/Users/apple/vagrant/locmak/quickstart/src/app/components/tab/tab.css",
 		"/Users/apple/vagrant/locmak/quickstart/src/app/app.component.html",
+		"/Users/apple/vagrant/locmak/quickstart/src/app/app.component.js",
+		"/Users/apple/vagrant/locmak/quickstart/src/app/controllers/test.component.html",
+		"/Users/apple/vagrant/locmak/quickstart/local-market.sublime-project",
 		"/Users/apple/vagrant/lolguru/resources/styl/blog/article.styl",
 		"/Users/apple/vagrant/lolguru/resources/views/layout.blade.php",
 		"/Users/apple/vagrant/lolguru/resources/styl/global/nav.styl",
@@ -183,6 +206,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bottom",
 			"footer-partners",
 			"footer-part",
 			"footer__partners",
@@ -204,7 +228,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -213,15 +237,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 174,
+						"buffer_size": 212,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								169,
-								169
+								0,
+								212
 							]
 						],
 						"settings":
@@ -245,24 +269,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/app/app.component.js",
+					"file": "src/app/app.component.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 988,
+						"buffer_size": 31,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								732,
-								732
+								27,
+								27
 							]
 						],
 						"settings":
@@ -270,7 +294,7 @@
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
@@ -284,19 +308,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "src/app/app.component.html",
+					"file": "src/app/components/tab/tab.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 31,
+						"buffer_size": 38,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								31,
-								31
+								38,
+								38
 							]
 						],
 						"settings":
@@ -319,7 +343,41 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/app/components/tab/tab.ts",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -406,7 +464,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 262.0,
+	"side_bar_width": 241.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
