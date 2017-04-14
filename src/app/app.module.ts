@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent }  from './app.component';
 import { TabComponent } from './components/tab/tab';
 import { TestComponent } from './controllers/test.component';
-import { ProductsComponent } from './controllers/products/products.component';
+import { Buyer } from './controllers/buyerPage/buyer';
 
 import { routes } from './app.routes';
 
@@ -20,7 +20,7 @@ import { routes } from './app.routes';
     AppComponent,
     TabComponent,
     TestComponent,
-    ProductsComponent
+    Buyer,
   ],
   bootstrap: [ AppComponent ]
 })

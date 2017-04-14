@@ -13,7 +13,7 @@ var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var tab_1 = require("./components/tab/tab");
 var test_component_1 = require("./controllers/test.component");
-var products_component_1 = require("./controllers/products/products.component");
+var buyer_1 = require("./controllers/buyerPage/buyer");
 var app_routes_1 = require("./app.routes");
 var AppModule = (function () {
     function AppModule() {
@@ -30,7 +30,7 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             tab_1.TabComponent,
             test_component_1.TestComponent,
-            products_component_1.ProductsComponent
+            buyer_1.Buyer,
         ],
         bootstrap: [app_component_1.AppComponent]
     })
