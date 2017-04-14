@@ -30,7 +30,7 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             tab_1.TabComponent,
             test_component_1.TestComponent,
-            buyer_1.Buyer
+            buyer_1.Buyer,
         ],
         bootstrap: [app_component_1.AppComponent]
     })

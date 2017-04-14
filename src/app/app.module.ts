@@ -20,7 +20,7 @@ import { routes } from './app.routes';
     AppComponent,
     TabComponent,
     TestComponent,
-    Buyer
+    Buyer,
   ],
   bootstrap: [ AppComponent ]
 })
