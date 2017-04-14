@@ -1,0 +1,89 @@
+<h1>{{res | json}}</h1>
+
+
+<button (click)="getProducts()">Get all product</button>
+<div class="signup center-block jumbotron">
+  <h1>Create new product</h1>
+  <form role="form" (submit)="postProducts(userId.value, typeId.value, name.value, desc.value, price.value)">
+  <div class="form-group">
+    <label for="username">userId</label>
+    <input type="text" #userId class="form-control" id="userId" placeholder="userId">
+  </div>
+  <div class="form-group">
+    <label for="typeId">typeId</label>
+    <input type="text" #typeId class="form-control" id="typeId" placeholder="typeId">
+  </div>
+  <div class="form-group">
+    <label for="name">name</label>
+    <input type="text" #name class="form-control" id="name" placeholder="name">
+  </div>
+  <div class="form-group">
+    <label for="desc">desc</label>
+    <input type="text" #desc class="form-control" id="desc" placeholder="desc">
+  </div>
+  <div class="form-group">
+    <label for="price">price</label>
+    <input type="number" #price class="form-control" id="price" placeholder="price">
+  </div>
+  <button type="submit" class="btn btn-default">Create new product</button>
+  </form>
+</div>
+<button (click)="deleteProducts()">Delete products</button>
+<div class="signup center-block jumbotron">
+  <h1>Get product by Id</h1>
+  <form role="form" (submit)="getProductsByType(typeId)">
+    <div class="form-group">
+      <label for="typeId">typeId</label>
+      <input type="text" #typeId class="form-control" id="typeId" placeholder="typeId">
+    </div>
+  </form>
+  <button type="submit" class="btn btn-default">Get product by Type</button>
+</div>
+<button (click)="deleteProducts()">Delete products by type</button>
+<div class="signup center-block jumbotron">
+  <h1>Get product by Type</h1>
+  <form role="form" (submit)="getProductById(productId)">
+    <div class="form-group">
+      <label for="productId">productId</label>
+      <input type="text" #productId class="form-control" id="productId" placeholder="productId">
+    </div>
+  </form>
+  <button type="submit" class="btn btn-default">Get product by Id</button>
+</div>
+<div class="signup center-block jumbotron">
+  <h1>Edit product by Id</h1>
+  <form role="form" (submit)="editProductById(productId.value, typeId.value, name.value, desc.value, price.value)">
+  <div class="form-group">
+    <label for="username">productId</label>
+    <input type="text" #productId class="form-control" id="productId" placeholder="productId">
+  </div>
+  <div class="form-group">
+    <label for="typeId">typeId</label>
+    <input type="text" #typeId class="form-control" id="typeId" placeholder="typeId">
+  </div>
+  <div class="form-group">
+    <label for="name">name</label>
+    <input type="text" #name class="form-control" id="name" placeholder="name">
+  </div>
+  <div class="form-group">
+    <label for="desc">desc</label>
+    <input type="text" #desc class="form-control" id="desc" placeholder="desc">
+  </div>
+  <div class="form-group">
+    <label for="price">price</label>
+    <input type="number" #price class="form-control" id="price" placeholder="price">
+  </div>
+  <button type="submit" class="btn btn-default">Edit product by Id</button>
+  </form>
+</div>
+<div class="signup center-block jumbotron">
+  <h1>Delete product by Type</h1>
+  <form role="form" (submit)="deleteProductById(productId)">
+    <div class="form-group">
+      <label for="productId">productId</label>
+      <input type="text" #productId class="form-control" id="productId" placeholder="productId">
+    </div>
+  </form>
+  <button type="submit" class="btn btn-default">Delete product by Id</button>
+</div>
+<button (click)="getProductsByUser()">Get products by user</button>
