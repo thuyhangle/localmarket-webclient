@@ -14,14 +14,12 @@ import { ProductsService } from './products.service';
 })
 export class ProductsComponent implements OnInit {
   res: any;
-  constructor(private productsService: ProductsService, private http: Http) {
-  }
+  typeId:string;
+  constructor(private productsService: ProductsService, private http: Http) { }
 
   ngOnInit() {
-  	  /*this.http.get(url+'products')
-  	  	.map(res => res.json())
-  	  	.subscribe((res) => console.log(res));*/
   }
+
   //GET products
   getProducts() {
     this.productsService.getProducts()
@@ -31,7 +29,9 @@ export class ProductsComponent implements OnInit {
   }
 
   //POST products
-  postProducts(userId, typeId, name, desc, price) {
+  postProducts(event, userId, typeId, name, desc, price) {
+    event.preventDefault();
+    console.log(userId, typeId, name, desc, price);
     this.productsService.postProducts(userId, typeId, name, desc, price);
   }
 
@@ -41,7 +41,8 @@ export class ProductsComponent implements OnInit {
   }
 
   //GET product by type
-  getProductsByType(typeId) {
+  getProductsByType(event, typeId) {
+    event.preventDefault();
     this.productsService.getProductsByType(typeId)
       .subscribe(
         res => this.res = res
@@ -54,7 +55,8 @@ export class ProductsComponent implements OnInit {
   }
 
   //GET product by Id
-  getProductById(productId) {
+  getProductById(event, productId) {
+    event.preventDefault();
     this.productsService.getProductById(productId)
       .subscribe(
         res => this.res = res

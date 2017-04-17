@@ -17,9 +17,6 @@ var ProductsComponent = (function () {
         this.http = http;
     }
     ProductsComponent.prototype.ngOnInit = function () {
-        /*this.http.get(url+'products')
-          .map(res => res.json())
-          .subscribe((res) => console.log(res));*/
     };
     //GET products
     ProductsComponent.prototype.getProducts = function () {
@@ -28,7 +25,9 @@ var ProductsComponent = (function () {
             .subscribe(function (res) { return _this.res = res; });
     };
     //POST products
-    ProductsComponent.prototype.postProducts = function (userId, typeId, name, desc, price) {
+    ProductsComponent.prototype.postProducts = function (event, userId, typeId, name, desc, price) {
+        event.preventDefault();
+        console.log(userId, typeId, name, desc, price);
         this.productsService.postProducts(userId, typeId, name, desc, price);
     };
     //DELETE products
@@ -36,8 +35,9 @@ var ProductsComponent = (function () {
         this.productsService.deleteProducts();
     };
     //GET product by type
-    ProductsComponent.prototype.getProductsByType = function (typeId) {
+    ProductsComponent.prototype.getProductsByType = function (event, typeId) {
         var _this = this;
+        event.preventDefault();
         this.productsService.getProductsByType(typeId)
             .subscribe(function (res) { return _this.res = res; });
     };
@@ -46,8 +46,9 @@ var ProductsComponent = (function () {
         this.productsService.deleteProductsByType(typeId);
     };
     //GET product by Id
-    ProductsComponent.prototype.getProductById = function (productId) {
+    ProductsComponent.prototype.getProductById = function (event, productId) {
         var _this = this;
+        event.preventDefault();
         this.productsService.getProductById(productId)
             .subscribe(function (res) { return _this.res = res; });
     };
