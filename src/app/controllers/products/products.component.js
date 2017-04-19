@@ -15,6 +15,7 @@ var ProductsComponent = (function () {
     function ProductsComponent(productsService, http) {
         this.productsService = productsService;
         this.http = http;
+        this.data = [];
     }
     ProductsComponent.prototype.ngOnInit = function () {
     };
@@ -22,13 +23,15 @@ var ProductsComponent = (function () {
     ProductsComponent.prototype.getProducts = function () {
         var _this = this;
         this.productsService.getProducts()
-            .subscribe(function (res) { return _this.res = res; });
+            .subscribe(function (data) {
+            _this.data = data;
+        });
     };
     //POST products
-    ProductsComponent.prototype.postProducts = function (event, userId, typeId, name, desc, price) {
+    ProductsComponent.prototype.postProducts = function (event, userId, typeId, name, desc, price, image) {
         event.preventDefault();
         console.log(userId, typeId, name, desc, price);
-        this.productsService.postProducts(userId, typeId, name, desc, price);
+        this.productsService.postProducts(userId, typeId, name, desc, price, image);
     };
     //DELETE products
     ProductsComponent.prototype.deleteProducts = function () {
@@ -38,8 +41,9 @@ var ProductsComponent = (function () {
     ProductsComponent.prototype.getProductsByType = function (event, typeId) {
         var _this = this;
         event.preventDefault();
+        console.log(typeId);
         this.productsService.getProductsByType(typeId)
-            .subscribe(function (res) { return _this.res = res; });
+            .subscribe(function (data) { return _this.data = data; });
     };
     //DELETE products by type
     ProductsComponent.prototype.deleteProductsByType = function (typeId) {
@@ -49,8 +53,9 @@ var ProductsComponent = (function () {
     ProductsComponent.prototype.getProductById = function (event, productId) {
         var _this = this;
         event.preventDefault();
+        console.log(productId);
         this.productsService.getProductById(productId)
-            .subscribe(function (res) { return _this.res = res; });
+            .subscribe(function (data) { return _this.data = data; });
     };
     //UPDATE product by Id
     ProductsComponent.prototype.editProductById = function (productId, typeId, name, desc, price) {

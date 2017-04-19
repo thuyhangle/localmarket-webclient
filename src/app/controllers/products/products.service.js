@@ -23,8 +23,8 @@ var ProductsService = (function () {
             .map(function (res) { return res.json(); });
     };
     //POST products
-    ProductsService.prototype.postProducts = function (userId, typeId, name, desc, price) {
-        var body = JSON.stringify({ userId: userId, typeId: typeId, name: name, desc: desc, price: price });
+    ProductsService.prototype.postProducts = function (userId, typeId, name, desc, price, image) {
+        var body = JSON.stringify({ userId: userId, typeId: typeId, name: name, desc: desc, price: price, image: image });
         console.log(body);
         this.http.post(headers_2.url + 'products', body, { headers: headers_1.contentHeaders });
     };

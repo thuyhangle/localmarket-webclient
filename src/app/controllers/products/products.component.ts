@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import { contentHeaders } from '../../components/common/headers';
 import { url } from '../../components/common/headers';
 
@@ -13,8 +13,8 @@ import { ProductsService } from './products.service';
   providers: [ProductsService]
 })
 export class ProductsComponent implements OnInit {
-  res: any;
-  typeId:string;
+  data = [];
+  image : any;
   constructor(private productsService: ProductsService, private http: Http) { }
 
   ngOnInit() {
@@ -24,15 +24,17 @@ export class ProductsComponent implements OnInit {
   getProducts() {
     this.productsService.getProducts()
       .subscribe(
-        res => this.res = res
+        data => {
+          this.data = data;
+        }
       );
   }
 
   //POST products
-  postProducts(event, userId, typeId, name, desc, price) {
+  postProducts(event, userId, typeId, name, desc, price, image) {
     event.preventDefault();
     console.log(userId, typeId, name, desc, price);
-    this.productsService.postProducts(userId, typeId, name, desc, price);
+    this.productsService.postProducts(userId, typeId, name, desc, price, image);
   }
 
   //DELETE products
@@ -43,9 +45,10 @@ export class ProductsComponent implements OnInit {
   //GET product by type
   getProductsByType(event, typeId) {
     event.preventDefault();
+    console.log(typeId);
     this.productsService.getProductsByType(typeId)
       .subscribe(
-        res => this.res = res
+        data => this.data = data
       );
   }
 
@@ -57,9 +60,10 @@ export class ProductsComponent implements OnInit {
   //GET product by Id
   getProductById(event, productId) {
     event.preventDefault();
+    console.log(productId);
     this.productsService.getProductById(productId)
       .subscribe(
-        res => this.res = res
+        data => this.data = data
       );
   }
 

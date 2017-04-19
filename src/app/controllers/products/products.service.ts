@@ -8,7 +8,7 @@ import { url } from '../../components/common/headers';
 
 @Injectable()
 export class ProductsService {
-  
+  mydata:any;
   constructor(private http: Http) { }
 
   //GET products
@@ -18,10 +18,10 @@ export class ProductsService {
   }
 
   //POST products
-  postProducts(userId, typeId, name, desc, price) {
-  	let body = JSON.stringify({userId, typeId, name, desc, price});
-    console.log(body);
-  	this.http.post(url+'products', body, {headers: contentHeaders});
+  postProducts(userId, typeId, name, desc, price, image) {
+  	let body = JSON.stringify({userId, typeId, name, desc, price, image});
+  	console.log(body);
+    this.http.post(url+'products', body, {headers: contentHeaders});
   }
 
   //DELETE products

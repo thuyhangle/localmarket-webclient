@@ -16,6 +16,8 @@ var test_component_1 = require("./controllers/test.component");
 var products_component_1 = require("./controllers/products/products.component");
 var users_component_1 = require("./controllers/users/users.component");
 var app_routes_1 = require("./app.routes");
+var orders_component_1 = require("./controllers/orders/orders.component");
+var types_component_1 = require("./controllers/types/types.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -32,7 +34,9 @@ AppModule = __decorate([
             tab_1.TabComponent,
             test_component_1.TestComponent,
             products_component_1.ProductsComponent,
-            users_component_1.UsersComponent
+            users_component_1.UsersComponent,
+            orders_component_1.OrdersComponent,
+            types_component_1.TypesComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     })
