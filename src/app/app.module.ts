@@ -13,6 +13,7 @@ import { UsersComponent } from './controllers/users/users.component';
 import { routes } from './app.routes';
 import { OrdersComponent } from './controllers/orders/orders.component';
 import { TypesComponent } from './controllers/types/types.component';
+import { PostsComponent } from './controllers/posts/posts.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { TypesComponent } from './controllers/types/types.component';
     ProductsComponent,
     UsersComponent,
     OrdersComponent,
-    TypesComponent
+    TypesComponent,
+    PostsComponent
   ],
   bootstrap: [ AppComponent ]
 })
