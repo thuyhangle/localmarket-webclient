@@ -16,7 +16,6 @@ export class OrdersService {
   	return this.http.get(url+'orders')
       .map((res: Response) => res.json());
   }
-
   //GET order by Id
   getOrderById(orderId) {
     return this.http.get(url+'orders/'+orderId)
@@ -26,7 +25,6 @@ export class OrdersService {
   deleteOrderById(orderId) {
   	this.http.delete(url+'orders/'+orderId);
   }
-
   //GET order with userId
   getOrderByUserId(userId) {
   	return this.http.get(url+'orders/user/items')
@@ -36,7 +34,6 @@ export class OrdersService {
   deleteOrderByUserId(userId) {
   	this.http.delete(url+'orders/user/items');
   }
-
   //GET order by productId
   getOrderByProductId(productId) {
   	return this.http.get(url+'orders/product/'+productId)

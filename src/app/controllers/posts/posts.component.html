@@ -1,3 +1,102 @@
-<p>
-  posts works!
-</p>
+<h1>{{data | json}}</h1>
+
+<!--Create post with productId-->
+<div class="signup center-block jumbotron">
+  <h1>Post new products</h1>
+  <form role="form" (submit)="createPostByProductid($event, productId.value, phone.value, address.value, other.value)">
+    <div class="form-group">
+      <label for="productId">productId</label>
+      <input type="text" #productId class="form-control" id="productId" placeholder="productId">
+    </div>
+    <div class="form-group">
+      <label for="phone">phone</label>
+      <input type="text" #phone class="form-control" id="phone" placeholder="phone">
+    </div>
+    <div class="form-group">
+      <label for="address">address</label>
+      <input type="text" #address class="form-control" id="address" placeholder="address">
+    </div>
+    <div class="form-group">
+      <label for="other">other</label>
+      <input type="text" #other class="form-control" id="other" placeholder="other">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--GET posts with productId-->
+<div class="signup center-block jumbotron">
+  <h1>Get posts by productId</h1>
+  <form role="form" (submit)="getPostsByProductId($event, productId.value)">
+    <div class="form-group">
+      <label for="productId">productId</label>
+      <input type="text" #productId class="form-control" id="productId" placeholder="productId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--DELETE posts by productId-->
+<div class="signup center-block jumbotron">
+  <h1>Get posts by productId</h1>
+  <form role="form" (submit)="deletePostsByProductId($event, productId.value)">
+    <div class="form-group">
+      <label for="productId">productId</label>
+      <input type="text" #productId class="form-control" id="productId" placeholder="productId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!-- GET all posts-->
+<button (click)="getPosts()">Get all posts</button>
+<!--DELETE all posts-->
+<button (click)="deletePosts()">Delete all posts</button>
+
+<!--GET post by Id-->
+<div class="signup center-block jumbotron">
+  <h1>Get post by Id</h1>
+  <form role="form" (submit)="getPostById($event, postId.value)">
+    <div class="form-group">
+      <label for="postId">postId</label>
+      <input type="text" #postId class="form-control" id="postId" placeholder="postId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--EDIT post by id-->
+<div class="signup center-block jumbotron">
+  <h1>Edit post by Id</h1>
+  <form role="form" (submit)="editPostById($event, postId.value, phone.value, address.value, other.value)">
+    <div class="form-group">
+      <label for="postId">postId</label>
+      <input type="text" #postId class="form-control" id="postId" placeholder="postId">
+    </div>
+    <div class="form-group">
+      <label for="phone">phone</label>
+      <input type="text" #phone class="form-control" id="phone" placeholder="phone">
+    </div>
+    <div class="form-group">
+      <label for="address">address</label>
+      <input type="text" #address class="form-control" id="address" placeholder="address">
+    </div>
+    <div class="form-group">
+      <label for="other">other</label>
+      <input type="text" #other class="form-control" id="other" placeholder="other">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--DELETE post by Id-->
+<div class="signup center-block jumbotron">
+  <h1>Delete post by Id</h1>
+  <form role="form" (submit)="deletePostById($event, postId.value)">
+    <div class="form-group">
+      <label for="postId">postId</label>
+      <input type="text" #postId class="form-control" id="postId" placeholder="postId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>

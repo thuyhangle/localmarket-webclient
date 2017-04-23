@@ -8,7 +8,7 @@ import { url } from '../../components/common/headers';
 
 @Injectable()
 export class ProductsService {
-  mydata:any;
+  
   constructor(private http: Http) { }
 
   //GET products
@@ -58,6 +58,7 @@ export class ProductsService {
   }
 
   //GET products by User
+  //NOT implemented
   getProductsByUser() {
     return this.http.get(url+'products/user/items')
       .map((res: Response) => res.json());

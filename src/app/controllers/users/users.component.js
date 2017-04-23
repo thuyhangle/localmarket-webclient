@@ -37,6 +37,7 @@ var UsersComponent = (function () {
             .subscribe(function (res) { return _this.res = res; });
     };
     //GET user profile
+    //NOT implemented
     UsersComponent.prototype.getUserProfile = function () {
         var _this = this;
         this.usersService.getUserProfile()

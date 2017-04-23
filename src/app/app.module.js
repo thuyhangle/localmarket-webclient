@@ -13,11 +13,12 @@ var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var tab_1 = require("./components/tab/tab");
 var test_component_1 = require("./controllers/test.component");
-var products_component_1 = require("./controllers/products/products.component");
-var users_component_1 = require("./controllers/users/users.component");
 var app_routes_1 = require("./app.routes");
 var orders_component_1 = require("./controllers/orders/orders.component");
 var types_component_1 = require("./controllers/types/types.component");
+var posts_component_1 = require("./controllers/posts/posts.component");
+var products_component_1 = require("./controllers/products/products.component");
+var users_component_1 = require("./controllers/users/users.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -36,7 +37,8 @@ AppModule = __decorate([
             products_component_1.ProductsComponent,
             users_component_1.UsersComponent,
             orders_component_1.OrdersComponent,
-            types_component_1.TypesComponent
+            types_component_1.TypesComponent,
+            posts_component_1.PostsComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     })

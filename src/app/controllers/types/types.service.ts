@@ -12,12 +12,12 @@ export class TypesService {
   constructor(private http: Http) { }
 
   //POST a type
-  postProducts(name, desc) {
+  postType(name, desc) {
   	let body = JSON.stringify({name, desc});
     this.http.post(url+'types', body, {headers: contentHeaders});
   }
   //GET types
-  getProducts() {
+  getTypes() {
   	return this.http.get(url+'types')
       .map((res: Response) => res.json());
   }

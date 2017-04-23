@@ -42,6 +42,7 @@ export class UsersComponent implements OnInit {
   }
 
   //GET user profile
+  //NOT implemented
   getUserProfile() {
   	this.usersService.getUserProfile()
   	  .subscribe(

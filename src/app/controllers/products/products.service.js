@@ -56,6 +56,7 @@ var ProductsService = (function () {
         this.http.delete(headers_2.url + 'products/' + productId);
     };
     //GET products by User
+    //NOT implemented
     ProductsService.prototype.getProductsByUser = function () {
         return this.http.get(headers_2.url + 'products/user/items')
             .map(function (res) { return res.json(); });

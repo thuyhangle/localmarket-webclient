@@ -41,12 +41,12 @@ var ProductsComponent = (function () {
     ProductsComponent.prototype.getProductsByType = function (event, typeId) {
         var _this = this;
         event.preventDefault();
-        console.log(typeId);
         this.productsService.getProductsByType(typeId)
             .subscribe(function (data) { return _this.data = data; });
     };
     //DELETE products by type
-    ProductsComponent.prototype.deleteProductsByType = function (typeId) {
+    ProductsComponent.prototype.deleteProductsByType = function (event, typeId) {
+        event.preventDefault();
         this.productsService.deleteProductsByType(typeId);
     };
     //GET product by Id
@@ -58,11 +58,13 @@ var ProductsComponent = (function () {
             .subscribe(function (data) { return _this.data = data; });
     };
     //UPDATE product by Id
-    ProductsComponent.prototype.editProductById = function (productId, typeId, name, desc, price) {
+    ProductsComponent.prototype.editProductById = function (event, productId, typeId, name, desc, price) {
+        event.preventDefault();
         this.productsService.editProductById(productId, typeId, name, desc, price);
     };
     //DELETE product by Id
-    ProductsComponent.prototype.deleteProductById = function (productId) {
+    ProductsComponent.prototype.deleteProductById = function (event, productId) {
+        event.preventDefault();
         this.productsService.deleteProductById(productId);
     };
     //GET products by User

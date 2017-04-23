@@ -2,3 +2,27 @@
 
 <button (click)="getUsers()">Get all users</button>
 <button (click)="login()">login</button>
+
+<!--GET User by Id-->
+<div class="signup center-block jumbotron">
+  <h1>Get user by Id</h1>
+  <form role="form" (submit)="getUserById($event, userId.value)">
+    <div class="form-group">
+      <label for="userId">userId</label>
+      <input type="text" #userId class="form-control" id="userId" placeholder="userId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--DELETE User by Id-->
+<div class="signup center-block jumbotron">
+  <h1>DELETE user by Id</h1>
+  <form role="form" (submit)="deleteUserById($event, userId.value)">
+    <div class="form-group">
+      <label for="userId">userId</label>
+      <input type="text" #userId class="form-control" id="userId" placeholder="userId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>

@@ -1,3 +1,53 @@
-<p>
-  types works!
-</p>
+<h1>{{data | json}}</h1>
+
+<!--POST a type-->
+<div class="signup center-block jumbotron">
+  <h1>Post new type</h1>
+  <form role="form" (submit)="postType($event, name.value, desc.value)">
+    <div class="form-group">
+      <label for="name">name</label>
+      <input type="text" #name class="form-control" id="name" placeholder="name">
+    </div>
+    <div class="form-group">
+      <label for="desc">desc</label>
+      <input type="text" #desc class="form-control" id="desc" placeholder="desc">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--GET all type-->
+<button (click)="getTypes">Get all types</button>
+<!--GET type by Id-->
+<div class="signup center-block jumbotron">
+  <h1>Get type by Id</h1>
+  <form role="form" (submit)="getTypeById($event, typeId.value)">
+    <div class="form-group">
+      <label for="typeId">typeId</label>
+      <input type="text" #typeId class="form-control" id="typeId" placeholder="typeId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--EDIT type by Id-->
+<div class="signup center-block jumbotron">
+  <h1>Post new type</h1>
+  <form role="form" (submit)="editTypeById($event, typeId.value, name.value, desc.value)">
+    <div class="form-group">
+      <label for="typeId">typeId</label>
+      <input type="text" #typeId class="form-control" id="typeId" placeholder="typeId">
+    </div>
+    <div class="form-group">
+      <label for="name">name</label>
+      <input type="text" #name class="form-control" id="name" placeholder="name">
+    </div>
+    <div class="form-group">
+      <label for="desc">desc</label>
+      <input type="text" #desc class="form-control" id="desc" placeholder="desc">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--DELETE type by Id-->

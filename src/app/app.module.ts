@@ -7,13 +7,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent }  from './app.component';
 import { TabComponent } from './components/tab/tab';
 import { TestComponent } from './controllers/test.component';
-import { ProductsComponent } from './controllers/products/products.component';
-import { UsersComponent } from './controllers/users/users.component';
 
 import { routes } from './app.routes';
 import { OrdersComponent } from './controllers/orders/orders.component';
 import { TypesComponent } from './controllers/types/types.component';
 import { PostsComponent } from './controllers/posts/posts.component';
+import { ProductsComponent } from './controllers/products/products.component';
+import { UsersComponent } from './controllers/users/users.component';
 
 @NgModule({
   imports: [
