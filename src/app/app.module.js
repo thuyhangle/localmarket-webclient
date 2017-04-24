@@ -20,6 +20,7 @@ var posts_component_1 = require("./controllers/posts/posts.component");
 var products_component_1 = require("./controllers/products/products.component");
 var users_component_1 = require("./controllers/users/users.component");
 var mapPage_1 = require("./controllers/mapPage/mapPage");
+var buyerPage_1 = require("./controllers/buyerPage/buyerPage");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -40,7 +41,8 @@ AppModule = __decorate([
             orders_component_1.OrdersComponent,
             types_component_1.TypesComponent,
             posts_component_1.PostsComponent,
-            mapPage_1.MapPage
+            mapPage_1.MapPage,
+            buyerPage_1.BuyerPage
         ],
         bootstrap: [app_component_1.AppComponent]
     })

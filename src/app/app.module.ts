@@ -16,6 +16,7 @@ import { ProductsComponent } from './controllers/products/products.component';
 import { UsersComponent } from './controllers/users/users.component';
 
 import { MapPage } from './controllers/mapPage/mapPage';
+import { BuyerPage } from './controllers/buyerPage/buyerPage';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { MapPage } from './controllers/mapPage/mapPage';
     OrdersComponent,
     TypesComponent,
     PostsComponent,
-    MapPage
+    MapPage,
+    BuyerPage
   ],
   bootstrap: [ AppComponent ]
 })
