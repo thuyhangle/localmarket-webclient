@@ -29,17 +29,17 @@ var TypesService = (function () {
     };
     //GET type with Id
     TypesService.prototype.getTypeById = function (typeId) {
-        return this.http.get(headers_2.url + 'types' + typeId)
+        return this.http.get(headers_2.url + 'types/' + typeId)
             .map(function (res) { return res.json(); });
     };
     //PUT type by Id
     TypesService.prototype.editTypeById = function (typeId, name, desc) {
         var body = JSON.stringify({ name: name, desc: desc });
-        this.http.put(headers_2.url + 'types' + typeId, body, { headers: headers_1.contentHeaders });
+        this.http.put(headers_2.url + 'types/' + typeId, body, { headers: headers_1.contentHeaders });
     };
     //DELETE type by Id
     TypesService.prototype.deleteTypeById = function (typeId) {
-        this.http.delete(headers_2.url + 'types' + typeId);
+        this.http.delete(headers_2.url + 'types/' + typeId);
     };
     return TypesService;
 }());
