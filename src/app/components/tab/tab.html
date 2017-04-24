@@ -1,7 +1,7 @@
 <h1>Hello {{name}} tab bar bottom</h1>
 <nav>
   <a [routerLink]="['products']" routerLinkActive="active">Product</a>
-  <a routerLink="/products" routerLinkActive="active">Farm</a>
-  <a routerLink="/orders" routerLinkActive="active">Cart</a>
-  <a routerLink="/posts" routerLinkActive="active">Account</a>
+  <a [routerLink]="['farm']" routerLinkActive="active">Farm</a>
+  <a [routerLink]="['cart']" routerLinkActive="active">Cart</a>
+  <a [routerLink]="['account']" routerLinkActive="active">Account</a>
 </nav>

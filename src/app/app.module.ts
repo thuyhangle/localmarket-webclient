@@ -14,6 +14,9 @@ import { TypesComponent } from './controllers/types/types.component';
 import { PostsComponent } from './controllers/posts/posts.component';
 import { ProductsComponent } from './controllers/products/products.component';
 import { UsersComponent } from './controllers/users/users.component';
+import { AccountComponent } from './controllers/accountComponent/account.component';
+import { CartComponent } from './controllers/cartComponent/cart.component';
+import { FarmComponent } from './controllers/farmComponent/farm.component';
 
 import { MapPage } from './controllers/mapPage/mapPage';
 import { BuyerPage } from './controllers/buyerPage/buyerPage';
@@ -32,6 +35,9 @@ import { BuyerPage } from './controllers/buyerPage/buyerPage';
     OrdersComponent,
     TypesComponent,
     PostsComponent,
+    AccountComponent,
+    CartComponent,
+    FarmComponent,
     MapPage,
     BuyerPage
   ],
