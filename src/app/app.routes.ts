@@ -12,7 +12,11 @@ import { BuyerPage } from './controllers/buyerPage/buyerPage';
 export const routes: Routes = [
   { path: '', component: MapPage },
   { path: 'mapPage', component: MapPage },
-  { path: 'buyerPage', component: BuyerPage },
+  { path: 'buyerPage', component: BuyerPage,
+    children: [
+      { path: 'products', component: ProductsComponent }
+    ]
+  },
   { path: 'products', component: ProductsComponent },
   { path: 'users', component: UsersComponent },
   { path: 'orders', component: OrdersComponent },
