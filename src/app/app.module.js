@@ -17,11 +17,8 @@ var app_routes_1 = require("./app.routes");
 var orders_component_1 = require("./controllers/orders/orders.component");
 var types_component_1 = require("./controllers/types/types.component");
 var posts_component_1 = require("./controllers/posts/posts.component");
-<<<<<<< HEAD
-=======
 var products_component_1 = require("./controllers/products/products.component");
 var users_component_1 = require("./controllers/users/users.component");
->>>>>>> 96536c15bb2ccc96a9ecf28b51807cac510403d0
 var AppModule = (function () {
     function AppModule() {
     }

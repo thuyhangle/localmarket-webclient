@@ -9,13 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-<<<<<<< HEAD
-var PostsComponent = (function () {
-    function PostsComponent() {
-    }
-    PostsComponent.prototype.ngOnInit = function () {
-    };
-=======
 var http_1 = require("@angular/http");
 var posts_service_1 = require("./posts.service");
 var PostsComponent = (function () {
@@ -70,23 +63,16 @@ var PostsComponent = (function () {
     PostsComponent.prototype.deletePostById = function (event, postId) {
         this.postsService.deletePostById(postId);
     };
->>>>>>> 96536c15bb2ccc96a9ecf28b51807cac510403d0
     return PostsComponent;
 }());
 PostsComponent = __decorate([
     core_1.Component({
         selector: 'app-posts',
         templateUrl: './posts.component.html',
-<<<<<<< HEAD
-        styleUrls: ['./posts.component.css']
-    }),
-    __metadata("design:paramtypes", [])
-=======
         styleUrls: ['./posts.component.css'],
         providers: [posts_service_1.PostsService]
     }),
     __metadata("design:paramtypes", [posts_service_1.PostsService, http_1.Http])
->>>>>>> 96536c15bb2ccc96a9ecf28b51807cac510403d0
 ], PostsComponent);
 exports.PostsComponent = PostsComponent;
 //# sourceMappingURL=posts.component.js.map
