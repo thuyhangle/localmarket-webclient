@@ -16,3 +16,118 @@
 <!--<h1>{{data.name | json}}</h1>-->
 <!--GET all product-->
 <button (click)="getProducts()">Get all product</button>
+
+<!--DELETE all products-->
+<button (click)="deleteProducts()">Delete all products</button>
+
+<!--POST NEW product-->
+<div class="signup center-block jumbotron">
+  <h1>Post new products</h1>
+  <form role="form" (submit)="postProducts($event, _userId.value, _typeId.value, _name.value, _desc.value, _price.value)">
+    <div class="form-group">
+      <label for="_userId">_userId</label>
+      <input type="text" #_userId class="form-control" id="_userId" placeholder="_userId">
+    </div>
+    <div class="form-group">
+      <label for="_typeId">_typeId</label>
+      <input type="text" #_typeId class="form-control" id="_typeId" placeholder="_typeId">
+    </div>
+    <div class="form-group">
+      <label for="_name">_name</label>
+      <input type="text" #_name class="form-control" id="_name" placeholder="_name">
+    </div>
+    <div class="form-group">
+      <label for="_desc">_desc</label>
+      <input type="text" #_desc class="form-control" id="_desc" placeholder="_desc">
+    </div>
+    <div class="form-group">
+      <label for="_price">_price</label>
+      <input type="text" #_price class="form-control" id="_price" placeholder="_price">
+    </div>
+    <div class="form-group">
+      <label for="image">image</label>
+      <input type="text" #image class="form-control" id="image" placeholder="image">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--GET product by Type-->
+<div class="signup center-block jumbotron">
+  <h1>Get product by Type</h1>
+  <form role="form" (submit)="getProductsByType($event, _typeId.value)">
+    <div class="form-group">
+      <label for="_typeId">TypeId</label>
+      <input type="text" #_typeId class="form-control" id="_typeId" placeholder="TypeId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!-- DELETE products by type-->
+<div class="signup center-block jumbotron">
+  <h1>Delete product by Type</h1>
+  <form role="form" (submit)="deleteProductsByType($event, _typeId.value)">
+    <div class="form-group">
+      <label for="_typeId">TypeId</label>
+      <input type="text" #_typeId class="form-control" id="_typeId" placeholder="TypeId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--GET product by Id-->
+<div class="signup center-block jumbotron">
+  <h1>Get product by Id</h1>
+  <form role="form" (submit)="getProductById($event, _productId.value)">
+    <div class="form-group">
+      <label for="_productId">_productId</label>
+      <input type="text" #_productId class="form-control" id="_productId" placeholder="_productId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!-- Edit product by Id-->
+<div class="signup center-block jumbotron">
+  <h1>Edit product by Id</h1>
+  <form role="form" (submit)="postProducts($event, _productId.value, _typeId.value, _name.value, _desc.value, _price.value)">
+    <div class="form-group">
+      <label for="_productId">_productId</label>
+      <input type="text" #_productId class="form-control" id="_productId" placeholder="_productId">
+    </div>
+    <div class="form-group">
+      <label for="_typeId">_typeId</label>
+      <input type="text" #_typeId class="form-control" id="_typeId" placeholder="_typeId">
+    </div>
+    <div class="form-group">
+      <label for="_name">_name</label>
+      <input type="text" #_name class="form-control" id="_name" placeholder="_name">
+    </div>
+    <div class="form-group">
+      <label for="_desc">_desc</label>
+      <input type="text" #_desc class="form-control" id="_desc" placeholder="_desc">
+    </div>
+    <div class="form-group">
+      <label for="_price">_price</label>
+      <input type="text" #_price class="form-control" id="_price" placeholder="_price">
+    </div>
+    <div class="form-group">
+      <label for="image">image</label>
+      <input type="text" #image class="form-control" id="image" placeholder="image">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!-- DELETE product by Id-->
+<div class="signup center-block jumbotron">
+  <h1>Get product by Id</h1>
+  <form role="form" (submit)="deleteProductById($event, _productId.value)">
+    <div class="form-group">
+      <label for="_productId">_productId</label>
+      <input type="text" #_productId class="form-control" id="_productId" placeholder="_productId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
