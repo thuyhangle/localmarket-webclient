@@ -62,3 +62,4 @@ export class UsersComponent implements OnInit {
   deleteUserById(event, userId) {
     this.usersService.getUserById(userId);
   }
+}

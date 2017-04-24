@@ -83,3 +83,4 @@ export class ProductsComponent implements OnInit {
   getProductsByUser() {
     this.productsService.getProductsByUser();
   }
+}
