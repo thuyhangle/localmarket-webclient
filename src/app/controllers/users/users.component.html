@@ -1,7 +1,40 @@
 <h1>{{res | json}}</h1>
 
 <button (click)="getUsers()">Get all users</button>
-<button (click)="login()">login</button>
+<button (click)="logout()">Log out</button>
+
+<!--LOG IN-->
+<div class="signup center-block jumbotron">
+  <h1>Log In</h1>
+  <form role="form" (submit)="login($event, _email.value, _password.value)" autocomplete="false">
+    <div class="form-group">
+      <label for="_email">_email</label>
+      <input type="text" #_email class="form-control" id="_email" placeholder="_email">
+    </div>
+    <div class="form-group">
+      <label for="_password">_password</label>
+      <input type="password" #_password class="form-control" id="_password" placeholder="_password">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!-- SIGN UP
+<div class="signup center-block jumbotron">
+  <h1>Sign up</h1>
+  <form role="form" (submit)="signup($event, _email.value, _password.value)">
+    <div class="form-group">
+      <label for="_email">_email</label>
+      <input type="text" #_email class="form-control" id="_email" placeholder="_email">
+    </div>
+    <div class="form-group">
+      <label for="_password">_password</label>
+      <input type="password" #_password class="form-control" id="_password" placeholder="_password">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+-->
 
 <!--GET User by Id-->
 <div class="signup center-block jumbotron">

@@ -16,23 +16,25 @@ import { UsersService } from './users.service';
 })
 export class UsersComponent implements OnInit {
   res: any;
-  constructor(private usersService: UsersService, private http: Http) { }
+  constructor(private usersService: UsersService, private http: Http, public router: Router) { }
 
   ngOnInit() {
   }
 
   //Login
-  login() {
-    let email = "test1@gmail.com";
-    let password = "test1";
-    let body = JSON.stringify({email,password});
-    console.log(body);
-    this.http.post('http://localhost:4000/login', body, {headers: contentHeaders})
-    .subscribe(
-      res => this.res = res
-      );
+  login(event, email, password) {
+    this.usersService.logIn(email, password);
   }
 
+  logout() {
+    localStorage.removeItem('currentUser');
+    this.router.navigate(['/users']);
+  }
+
+  signup(event, email, password) {
+    this.usersService.postUser(email, password);
+  }
+  
   //GET all user
   getUsers() {
     this.usersService.getUsers()
@@ -60,6 +62,7 @@ export class UsersComponent implements OnInit {
 
   //DELETE user by Id
   deleteUserById(event, userId) {
-    this.usersService.getUserById(userId);
+    this.usersService.deleteUserById(userId);
+    console.log(userId);
   }
 }
