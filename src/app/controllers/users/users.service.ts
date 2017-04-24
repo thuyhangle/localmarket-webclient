@@ -33,5 +33,4 @@ export class UsersService {
   deleteUserById(userId) {
   	this.http.delete(url + 'users/' + userId);
   }
-
 }

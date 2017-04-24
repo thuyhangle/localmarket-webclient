@@ -1,3 +1,76 @@
-<p>
-  orders works!
-</p>
+<h1>{{data | json}}</h1>
+
+<!--GET all orders-->
+<button (click)="getOrders()">Get all orders</button>
+
+<!--GET order by Id-->
+<div class="signup center-block jumbotron">
+  <h1>Get Order by Id</h1>
+  <form role="form" (submit)="getOrderById($event, orderId.value)">
+    <div class="form-group">
+      <label for="orderId">orderId</label>
+      <input type="text" #orderId class="form-control" id="orderId" placeholder="orderId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--DELETE order By Id-->
+<div class="signup center-block jumbotron">
+  <h1>Delete Order by Id</h1>
+  <form role="form" (submit)="deleteOrderById($event, orderId.value)">
+    <div class="form-group">
+      <label for="orderId">orderId</label>
+      <input type="text" #orderId class="form-control" id="orderId" placeholder="orderId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--GET order by userId-->
+<div class="signup center-block jumbotron">
+  <h1>Get order by userId</h1>
+  <form role="form" (submit)="getOrderByUserid($event, userId.value)">
+    <div class="form-group">
+      <label for="userId">userId</label>
+      <input type="text" #userId class="form-control" id="userId" placeholder="userId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!--DELETE order by userId-->
+<div class="signup center-block jumbotron">
+  <h1>Delete order by userId</h1>
+  <form role="form" (submit)="deleteOrderByUserId($event, userId.value)">
+    <div class="form-group">
+      <label for="userId">userId</label>
+      <input type="text" #userId class="form-control" id="userId" placeholder="userId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!-- GET order by ProductId-->
+<div class="signup center-block jumbotron">
+  <h1>Get order By product Id</h1>
+  <form role="form" (submit)="getOrderByProductId($event, productId.value)">
+    <div class="form-group">
+      <label for="productId">productId</label>
+      <input type="text" #productId class="form-control" id="productId" placeholder="productId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<!-- DELETE order by product Id-->
+<div class="signup center-block jumbotron">
+  <h1>Delete order By product Id</h1>
+  <form role="form" (submit)="deleteOrderByProductId($event, productId.value)">
+    <div class="form-group">
+      <label for="productId">productId</label>
+      <input type="text" #productId class="form-control" id="productId" placeholder="productId">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
