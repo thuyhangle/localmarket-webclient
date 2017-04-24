@@ -14,7 +14,12 @@ export class PostsService {
   //POST a post with productId
   createPostByProductId(productId, phone, address, other) {
   	let body = JSON.stringify({phone, address, other});
-    this.http.post(url+'posts/product/'+productId, body, {headers: contentHeaders});
+    this.http.post(url+'posts/product/'+productId, body, {headers: contentHeaders})
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
   //GET all posts with productId
   getPostsByProductId(productId) {
@@ -23,7 +28,12 @@ export class PostsService {
   }
   //DELETE all posts with productId
   deletePostsByProductId(productId) {
-  	this.http.delete(url+'posts/products/'+productId);
+  	this.http.delete(url+'posts/products/'+productId)
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
   //GET all posts
   getPosts() {
@@ -32,7 +42,12 @@ export class PostsService {
   }
   //DELETE all posts
   deletePosts() {
-  	this.http.delete(url+'posts');  	
+  	this.http.delete(url+'posts')	
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
   //GET post by Id
   getPostById(postId) {
@@ -42,10 +57,20 @@ export class PostsService {
   //EDIT post by Id
   editPostById(postId, phone, address, other) {
   	let body = JSON.stringify({phone, address, other});
-  	this.http.post(url+'posts/'+postId, body, {headers: contentHeaders});
+  	this.http.post(url+'posts/'+postId, body, {headers: contentHeaders})
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
   //DELETE post by Id
   deletePostById(postId) {
-  	this.http.delete(url+'posts/'+postId);
+  	this.http.delete(url+'posts/'+postId)
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
 }

@@ -28,7 +28,10 @@ var OrdersService = (function () {
     };
     //DELETE order by Id
     OrdersService.prototype.deleteOrderById = function (orderId) {
-        this.http.delete(headers_1.url + 'orders/' + orderId);
+        this.http.delete(headers_1.url + 'orders/' + orderId)
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //GET order with userId
     OrdersService.prototype.getOrderByUserId = function (userId) {
@@ -37,7 +40,10 @@ var OrdersService = (function () {
     };
     //DELETE order by userId
     OrdersService.prototype.deleteOrderByUserId = function (userId) {
-        this.http.delete(headers_1.url + 'orders/user/items');
+        this.http.delete(headers_1.url + 'orders/user/items')
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //GET order by productId
     OrdersService.prototype.getOrderByProductId = function (productId) {
@@ -46,7 +52,10 @@ var OrdersService = (function () {
     };
     //DELETE order by productId
     OrdersService.prototype.deleteOrderByProductId = function (productId) {
-        this.http.delete(headers_1.url + 'orders/product/' + productId);
+        this.http.delete(headers_1.url + 'orders/product/' + productId)
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     return OrdersService;
 }());

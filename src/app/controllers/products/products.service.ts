@@ -20,13 +20,22 @@ export class ProductsService {
   //POST products
   postProducts(userId, typeId, name, desc, price, image) {
   	let body = JSON.stringify({userId, typeId, name, desc, price, image});
-  	console.log(body);
-    this.http.post(url+'products', body, {headers: contentHeaders});
+    this.http.post(url+'products', body, {headers: contentHeaders})
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
 
   //DELETE products
   deleteProducts() {
-    this.http.delete(url+'products');
+    this.http.delete(url+'products')
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
 
   //GET products by Type
@@ -37,7 +46,12 @@ export class ProductsService {
 
   //DELETE products by type
   deleteProductsByType(typeId) {
-    this.http.delete(url+'products/type/'+typeId);
+    this.http.delete(url+'products/type/'+typeId)
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
 
   //GET products by id
@@ -49,12 +63,22 @@ export class ProductsService {
   //UPDATE product by Id
   editProductById(productId, typeId, name, desc, price) {
     let body = JSON.stringify({typeId, name, desc, price});
-    this.http.put(url+'products/'+productId, body, {headers: contentHeaders});
+    this.http.put(url+'products/'+productId, body, {headers: contentHeaders})
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
 
   //DELETE product by Id
   deleteProductById(productId) {
-    this.http.delete(url+'products/'+productId);
+    this.http.delete(url+'products/'+productId)
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
 
   //GET products by User

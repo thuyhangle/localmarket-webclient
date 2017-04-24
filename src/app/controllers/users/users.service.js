@@ -33,7 +33,10 @@ var UsersService = (function () {
     };
     //DELETE user by Id
     UsersService.prototype.deleteUserById = function (userId) {
-        this.http.delete(headers_1.url + 'users/' + userId);
+        this.http.delete(headers_1.url + 'users/' + userId)
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     return UsersService;
 }());

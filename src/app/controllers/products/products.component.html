@@ -23,26 +23,26 @@
 <!--POST NEW product-->
 <div class="signup center-block jumbotron">
   <h1>Post new products</h1>
-  <form role="form" (submit)="postProducts($event, userId.value, typeId.value, name.value, desc.value, price.value)">
+  <form role="form" (submit)="postProducts($event, _userId.value, _typeId.value, _name.value, _desc.value, _price.value)">
     <div class="form-group">
-      <label for="userId">userId</label>
-      <input type="text" #userId class="form-control" id="userId" placeholder="userId">
+      <label for="_userId">_userId</label>
+      <input type="text" #_userId class="form-control" id="_userId" placeholder="_userId">
     </div>
     <div class="form-group">
-      <label for="typeId">typeId</label>
-      <input type="text" #typeId class="form-control" id="typeId" placeholder="typeId">
+      <label for="_typeId">_typeId</label>
+      <input type="text" #_typeId class="form-control" id="_typeId" placeholder="_typeId">
     </div>
     <div class="form-group">
-      <label for="name">name</label>
-      <input type="text" #name class="form-control" id="name" placeholder="name">
+      <label for="_name">_name</label>
+      <input type="text" #_name class="form-control" id="_name" placeholder="_name">
     </div>
     <div class="form-group">
-      <label for="desc">desc</label>
-      <input type="text" #desc class="form-control" id="desc" placeholder="desc">
+      <label for="_desc">_desc</label>
+      <input type="text" #_desc class="form-control" id="_desc" placeholder="_desc">
     </div>
     <div class="form-group">
-      <label for="price">price</label>
-      <input type="text" #price class="form-control" id="price" placeholder="price">
+      <label for="_price">_price</label>
+      <input type="text" #_price class="form-control" id="_price" placeholder="_price">
     </div>
     <div class="form-group">
       <label for="image">image</label>
@@ -91,26 +91,26 @@
 <!-- Edit product by Id-->
 <div class="signup center-block jumbotron">
   <h1>Edit product by Id</h1>
-  <form role="form" (submit)="postProducts($event, productId.value, typeId.value, name.value, desc.value, price.value)">
+  <form role="form" (submit)="postProducts($event, _productId.value, _typeId.value, _name.value, _desc.value, _price.value)">
     <div class="form-group">
-      <label for="productId">productId</label>
-      <input type="text" #productId class="form-control" id="productId" placeholder="productId">
+      <label for="_productId">_productId</label>
+      <input type="text" #_productId class="form-control" id="_productId" placeholder="_productId">
     </div>
     <div class="form-group">
-      <label for="typeId">typeId</label>
-      <input type="text" #typeId class="form-control" id="typeId" placeholder="typeId">
+      <label for="_typeId">_typeId</label>
+      <input type="text" #_typeId class="form-control" id="_typeId" placeholder="_typeId">
     </div>
     <div class="form-group">
-      <label for="name">name</label>
-      <input type="text" #name class="form-control" id="name" placeholder="name">
+      <label for="_name">_name</label>
+      <input type="text" #_name class="form-control" id="_name" placeholder="_name">
     </div>
     <div class="form-group">
-      <label for="desc">desc</label>
-      <input type="text" #desc class="form-control" id="desc" placeholder="desc">
+      <label for="_desc">_desc</label>
+      <input type="text" #_desc class="form-control" id="_desc" placeholder="_desc">
     </div>
     <div class="form-group">
-      <label for="price">price</label>
-      <input type="text" #price class="form-control" id="price" placeholder="price">
+      <label for="_price">_price</label>
+      <input type="text" #_price class="form-control" id="_price" placeholder="_price">
     </div>
     <div class="form-group">
       <label for="image">image</label>

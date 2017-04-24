@@ -20,7 +20,10 @@ var TypesService = (function () {
     //POST a type
     TypesService.prototype.postType = function (name, desc) {
         var body = JSON.stringify({ name: name, desc: desc });
-        this.http.post(headers_2.url + 'types', body, { headers: headers_1.contentHeaders });
+        this.http.post(headers_2.url + 'types/', body, { headers: headers_1.contentHeaders })
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //GET types
     TypesService.prototype.getTypes = function () {
@@ -35,11 +38,17 @@ var TypesService = (function () {
     //PUT type by Id
     TypesService.prototype.editTypeById = function (typeId, name, desc) {
         var body = JSON.stringify({ name: name, desc: desc });
-        this.http.put(headers_2.url + 'types/' + typeId, body, { headers: headers_1.contentHeaders });
+        this.http.put(headers_2.url + 'types/' + typeId, body, { headers: headers_1.contentHeaders })
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //DELETE type by Id
     TypesService.prototype.deleteTypeById = function (typeId) {
-        this.http.delete(headers_2.url + 'types/' + typeId);
+        this.http.delete(headers_2.url + 'types/' + typeId)
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     return TypesService;
 }());

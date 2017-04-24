@@ -31,6 +31,11 @@ export class UsersService {
 
   //DELETE user by Id
   deleteUserById(userId) {
-  	this.http.delete(url + 'users/' + userId);
+  	this.http.delete(url + 'users/' + userId)
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
 }

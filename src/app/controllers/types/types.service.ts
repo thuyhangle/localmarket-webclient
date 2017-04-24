@@ -14,7 +14,12 @@ export class TypesService {
   //POST a type
   postType(name, desc) {
     let body = JSON.stringify({name, desc});
-    this.http.post(url+'types', body, {headers: contentHeaders});
+    this.http.post(url+'types/', body, {headers: contentHeaders})
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
   //GET types
   getTypes() {
@@ -30,10 +35,20 @@ export class TypesService {
   //PUT type by Id
   editTypeById(typeId, name, desc) {
     let body = JSON.stringify({name, desc});
-    this.http.put(url+'types/'+typeId, body, {headers: contentHeaders});
+    this.http.put(url+'types/'+typeId, body, {headers: contentHeaders})
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
   //DELETE type by Id
   deleteTypeById(typeId) {
-    this.http.delete(url+'types/'+typeId);
+    this.http.delete(url+'types/'+typeId)
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
 }

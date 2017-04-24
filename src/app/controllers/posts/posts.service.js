@@ -20,7 +20,10 @@ var PostsService = (function () {
     //POST a post with productId
     PostsService.prototype.createPostByProductId = function (productId, phone, address, other) {
         var body = JSON.stringify({ phone: phone, address: address, other: other });
-        this.http.post(headers_2.url + 'posts/product/' + productId, body, { headers: headers_1.contentHeaders });
+        this.http.post(headers_2.url + 'posts/product/' + productId, body, { headers: headers_1.contentHeaders })
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //GET all posts with productId
     PostsService.prototype.getPostsByProductId = function (productId) {
@@ -29,7 +32,10 @@ var PostsService = (function () {
     };
     //DELETE all posts with productId
     PostsService.prototype.deletePostsByProductId = function (productId) {
-        this.http.delete(headers_2.url + 'posts/products/' + productId);
+        this.http.delete(headers_2.url + 'posts/products/' + productId)
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //GET all posts
     PostsService.prototype.getPosts = function () {
@@ -38,7 +44,10 @@ var PostsService = (function () {
     };
     //DELETE all posts
     PostsService.prototype.deletePosts = function () {
-        this.http.delete(headers_2.url + 'posts');
+        this.http.delete(headers_2.url + 'posts')
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //GET post by Id
     PostsService.prototype.getPostById = function (postId) {
@@ -48,11 +57,17 @@ var PostsService = (function () {
     //EDIT post by Id
     PostsService.prototype.editPostById = function (postId, phone, address, other) {
         var body = JSON.stringify({ phone: phone, address: address, other: other });
-        this.http.post(headers_2.url + 'posts/' + postId, body, { headers: headers_1.contentHeaders });
+        this.http.post(headers_2.url + 'posts/' + postId, body, { headers: headers_1.contentHeaders })
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //DELETE post by Id
     PostsService.prototype.deletePostById = function (postId) {
-        this.http.delete(headers_2.url + 'posts/' + postId);
+        this.http.delete(headers_2.url + 'posts/' + postId)
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     return PostsService;
 }());

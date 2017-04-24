@@ -3,22 +3,22 @@
 <!--Create post with productId-->
 <div class="signup center-block jumbotron">
   <h1>Post new products</h1>
-  <form role="form" (submit)="createPostByProductid($event, productId.value, phone.value, address.value, other.value)">
+  <form role="form" (submit)="createPostByProductid($event, _productId.value, _phone.value, _address.value, _other.value)">
     <div class="form-group">
-      <label for="productId">productId</label>
-      <input type="text" #productId class="form-control" id="productId" placeholder="productId">
+      <label for="_productId">_productId</label>
+      <input type="text" #_productId class="form-control" id="_productId" placeholder="_productId">
     </div>
     <div class="form-group">
-      <label for="phone">phone</label>
-      <input type="text" #phone class="form-control" id="phone" placeholder="phone">
+      <label for="_phone">_phone</label>
+      <input type="text" #_phone class="form-control" id="_phone" placeholder="_phone">
     </div>
     <div class="form-group">
-      <label for="address">address</label>
-      <input type="text" #address class="form-control" id="address" placeholder="address">
+      <label for="_address">_address</label>
+      <input type="text" #_address class="form-control" id="_address" placeholder="_address">
     </div>
     <div class="form-group">
-      <label for="other">other</label>
-      <input type="text" #other class="form-control" id="other" placeholder="other">
+      <label for="_other">_other</label>
+      <input type="text" #_other class="form-control" id="_other" placeholder="_other">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
@@ -27,10 +27,10 @@
 <!--GET posts with productId-->
 <div class="signup center-block jumbotron">
   <h1>Get posts by productId</h1>
-  <form role="form" (submit)="getPostsByProductId($event, productId.value)">
+  <form role="form" (submit)="getPostsByProductId($event, _productId.value)">
     <div class="form-group">
-      <label for="productId">productId</label>
-      <input type="text" #productId class="form-control" id="productId" placeholder="productId">
+      <label for="_productId">_productId</label>
+      <input type="text" #_productId class="form-control" id="_productId" placeholder="_productId">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
@@ -39,10 +39,10 @@
 <!--DELETE posts by productId-->
 <div class="signup center-block jumbotron">
   <h1>Get posts by productId</h1>
-  <form role="form" (submit)="deletePostsByProductId($event, productId.value)">
+  <form role="form" (submit)="deletePostsByProductId($event, _productId.value)">
     <div class="form-group">
-      <label for="productId">productId</label>
-      <input type="text" #productId class="form-control" id="productId" placeholder="productId">
+      <label for="_productId">_productId</label>
+      <input type="text" #_productId class="form-control" id="_productId" placeholder="_productId">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
@@ -56,10 +56,10 @@
 <!--GET post by Id-->
 <div class="signup center-block jumbotron">
   <h1>Get post by Id</h1>
-  <form role="form" (submit)="getPostById($event, postId.value)">
+  <form role="form" (submit)="getPostById($event, _postId.value)">
     <div class="form-group">
-      <label for="postId">postId</label>
-      <input type="text" #postId class="form-control" id="postId" placeholder="postId">
+      <label for="_postId">_postId</label>
+      <input type="text" #_postId class="form-control" id="_postId" placeholder="_postId">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
@@ -68,22 +68,22 @@
 <!--EDIT post by id-->
 <div class="signup center-block jumbotron">
   <h1>Edit post by Id</h1>
-  <form role="form" (submit)="editPostById($event, postId.value, phone.value, address.value, other.value)">
+  <form role="form" (submit)="editPostById($event, _postId.value, _phone.value, _address.value, _other.value)">
     <div class="form-group">
-      <label for="postId">postId</label>
-      <input type="text" #postId class="form-control" id="postId" placeholder="postId">
+      <label for="_postId">_postId</label>
+      <input type="text" #_postId class="form-control" id="_postId" placeholder="_postId">
     </div>
     <div class="form-group">
-      <label for="phone">phone</label>
-      <input type="text" #phone class="form-control" id="phone" placeholder="phone">
+      <label for="_phone">_phone</label>
+      <input type="text" #_phone class="form-control" id="_phone" placeholder="_phone">
     </div>
     <div class="form-group">
-      <label for="address">address</label>
-      <input type="text" #address class="form-control" id="address" placeholder="address">
+      <label for="_address">_address</label>
+      <input type="text" #_address class="form-control" id="_address" placeholder="_address">
     </div>
     <div class="form-group">
-      <label for="other">other</label>
-      <input type="text" #other class="form-control" id="other" placeholder="other">
+      <label for="_other">_other</label>
+      <input type="text" #_other class="form-control" id="_other" placeholder="_other">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
@@ -92,10 +92,10 @@
 <!--DELETE post by Id-->
 <div class="signup center-block jumbotron">
   <h1>Delete post by Id</h1>
-  <form role="form" (submit)="deletePostById($event, postId.value)">
+  <form role="form" (submit)="deletePostById($event, _postId.value)">
     <div class="form-group">
-      <label for="postId">postId</label>
-      <input type="text" #postId class="form-control" id="postId" placeholder="postId">
+      <label for="_postId">_postId</label>
+      <input type="text" #_postId class="form-control" id="_postId" placeholder="_postId">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

@@ -24,7 +24,12 @@ export class OrdersService {
   }
   //DELETE order by Id
   deleteOrderById(orderId) {
-  	this.http.delete(url+'orders/'+orderId);
+  	this.http.delete(url+'orders/'+orderId)
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
 
   //GET order with userId
@@ -34,7 +39,12 @@ export class OrdersService {
   }
   //DELETE order by userId
   deleteOrderByUserId(userId) {
-  	this.http.delete(url+'orders/user/items');
+  	this.http.delete(url+'orders/user/items')
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
 
   //GET order by productId
@@ -44,6 +54,11 @@ export class OrdersService {
   }
   //DELETE order by productId
   deleteOrderByProductId(productId) {
-  	this.http.delete(url+'orders/product/'+productId);
+  	this.http.delete(url+'orders/product/'+productId)
+      .subscribe(
+        data => {
+            console.log(data.json());           
+        }
+      );
   }
 }

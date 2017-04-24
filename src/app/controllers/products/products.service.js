@@ -25,12 +25,17 @@ var ProductsService = (function () {
     //POST products
     ProductsService.prototype.postProducts = function (userId, typeId, name, desc, price, image) {
         var body = JSON.stringify({ userId: userId, typeId: typeId, name: name, desc: desc, price: price, image: image });
-        console.log(body);
-        this.http.post(headers_2.url + 'products', body, { headers: headers_1.contentHeaders });
+        this.http.post(headers_2.url + 'products', body, { headers: headers_1.contentHeaders })
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //DELETE products
     ProductsService.prototype.deleteProducts = function () {
-        this.http.delete(headers_2.url + 'products');
+        this.http.delete(headers_2.url + 'products')
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //GET products by Type
     ProductsService.prototype.getProductsByType = function (typeId) {
@@ -39,7 +44,10 @@ var ProductsService = (function () {
     };
     //DELETE products by type
     ProductsService.prototype.deleteProductsByType = function (typeId) {
-        this.http.delete(headers_2.url + 'products/type/' + typeId);
+        this.http.delete(headers_2.url + 'products/type/' + typeId)
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //GET products by id
     ProductsService.prototype.getProductById = function (productId) {
@@ -49,11 +57,17 @@ var ProductsService = (function () {
     //UPDATE product by Id
     ProductsService.prototype.editProductById = function (productId, typeId, name, desc, price) {
         var body = JSON.stringify({ typeId: typeId, name: name, desc: desc, price: price });
-        this.http.put(headers_2.url + 'products/' + productId, body, { headers: headers_1.contentHeaders });
+        this.http.put(headers_2.url + 'products/' + productId, body, { headers: headers_1.contentHeaders })
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //DELETE product by Id
     ProductsService.prototype.deleteProductById = function (productId) {
-        this.http.delete(headers_2.url + 'products/' + productId);
+        this.http.delete(headers_2.url + 'products/' + productId)
+            .subscribe(function (data) {
+            console.log(data.json());
+        });
     };
     //GET products by User
     ProductsService.prototype.getProductsByUser = function () {

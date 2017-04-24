@@ -3,14 +3,14 @@
 <!--POST a type-->
 <div class="signup center-block jumbotron">
   <h1>Post new type</h1>
-  <form role="form" (submit)="postType($event, name.value, desc.value)">
+  <form role="form" (submit)="postType($event, _name.value, _desc.value)">
     <div class="form-group">
-      <label for="name">name</label>
-      <input type="text" #name class="form-control" id="name" placeholder="name">
+      <label for="_name">_name</label>
+      <input type="text" #_name class="form-control" id="_name" placeholder="_name">
     </div>
     <div class="form-group">
-      <label for="desc">desc</label>
-      <input type="text" #desc class="form-control" id="desc" placeholder="desc">
+      <label for="_desc">_desc</label>
+      <input type="text" #_desc class="form-control" id="_desc" placeholder="_desc">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
@@ -21,10 +21,10 @@
 <!--GET type by Id-->
 <div class="signup center-block jumbotron">
   <h1>Get type by Id</h1>
-  <form role="form" (submit)="getTypeById($event, typeId.value)">
+  <form role="form" (submit)="getTypeById($event, _typeId.value)">
     <div class="form-group">
-      <label for="typeId">typeId</label>
-      <input type="text" #typeId class="form-control" id="typeId" placeholder="typeId">
+      <label for="_typeId">_typeId</label>
+      <input type="text" #_typeId class="form-control" id="_typeId" placeholder="_typeId">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
@@ -33,18 +33,18 @@
 <!--EDIT type by Id-->
 <div class="signup center-block jumbotron">
   <h1>Post new type</h1>
-  <form role="form" (submit)="editTypeById($event, typeId.value, name.value, desc.value)">
+  <form role="form" (submit)="editTypeById($event, _typeId.value, _name.value, _desc.value)">
     <div class="form-group">
-      <label for="typeId">typeId</label>
-      <input type="text" #typeId class="form-control" id="typeId" placeholder="typeId">
+      <label for="_typeId">_typeId</label>
+      <input type="text" #_typeId class="form-control" id="_typeId" placeholder="_typeId">
     </div>
     <div class="form-group">
-      <label for="name">name</label>
-      <input type="text" #name class="form-control" id="name" placeholder="name">
+      <label for="_name">_name</label>
+      <input type="text" #_name class="form-control" id="_name" placeholder="_name">
     </div>
     <div class="form-group">
-      <label for="desc">desc</label>
-      <input type="text" #desc class="form-control" id="desc" placeholder="desc">
+      <label for="_desc">_desc</label>
+      <input type="text" #_desc class="form-control" id="_desc" placeholder="_desc">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
@@ -53,10 +53,10 @@
 <!--DELETE type by Id-->
 <div class="signup center-block jumbotron">
   <h1>Delete type by Id</h1>
-  <form role="form" (submit)="deleteTypeById($event, typeId.value)">
+  <form role="form" (submit)="deleteTypeById($event, _typeId.value)">
     <div class="form-group">
-      <label for="typeId">typeId</label>
-      <input type="text" #typeId class="form-control" id="typeId" placeholder="typeId">
+      <label for="_typeId">_typeId</label>
+      <input type="text" #_typeId class="form-control" id="_typeId" placeholder="_typeId">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

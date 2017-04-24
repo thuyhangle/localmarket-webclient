@@ -6,10 +6,10 @@
 <!--GET User by Id-->
 <div class="signup center-block jumbotron">
   <h1>Get user by Id</h1>
-  <form role="form" (submit)="getUserById($event, userId.value)">
+  <form role="form" (submit)="getUserById($event, _userId.value)">
     <div class="form-group">
-      <label for="userId">userId</label>
-      <input type="text" #userId class="form-control" id="userId" placeholder="userId">
+      <label for="_userId">_userId</label>
+      <input type="text" #_userId class="form-control" id="_userId" placeholder="_userId">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
@@ -18,10 +18,10 @@
 <!--DELETE User by Id-->
 <div class="signup center-block jumbotron">
   <h1>DELETE user by Id</h1>
-  <form role="form" (submit)="deleteUserById($event, userId.value)">
+  <form role="form" (submit)="deleteUserById($event, _userId.value)">
     <div class="form-group">
-      <label for="userId">userId</label>
-      <input type="text" #userId class="form-control" id="userId" placeholder="userId">
+      <label for="_userId">_userId</label>
+      <input type="text" #_userId class="form-control" id="_userId" placeholder="_userId">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
