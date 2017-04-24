@@ -12,6 +12,10 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "files.exclude": {
+        "**/*.js": { "when": "$(basename).ts"},
+        "**/*.js.map": { "when": "$(basename)"}
+    },
     "lib": [
       "es2016",
       "dom"

@@ -5,9 +5,10 @@ import { TypesComponent } from './controllers/types/types.component';
 import { PostsComponent } from './controllers/posts/posts.component';
 import { ProductsComponent } from './controllers/products/products.component';
 import { UsersComponent } from './controllers/users/users.component';
+import { MapPage } from './controllers/mapPage/mapPage';
 
 export const routes: Routes = [
-  { path: '', component: TestComponent },
+  { path: '', component: MapPage },
   { path: 'products', component: ProductsComponent },
   { path: 'users', component: UsersComponent },
   { path: 'orders', component: OrdersComponent },

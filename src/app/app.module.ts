@@ -15,6 +15,8 @@ import { PostsComponent } from './controllers/posts/posts.component';
 import { ProductsComponent } from './controllers/products/products.component';
 import { UsersComponent } from './controllers/users/users.component';
 
+import { MapPage } from './controllers/mapPage/mapPage';
+
 @NgModule({
   imports: [
     HttpModule, BrowserModule, FormsModule,
@@ -28,7 +30,8 @@ import { UsersComponent } from './controllers/users/users.component';
     UsersComponent,
     OrdersComponent,
     TypesComponent,
-    PostsComponent
+    PostsComponent,
+    MapPage
   ],
   bootstrap: [ AppComponent ]
 })
