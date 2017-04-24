@@ -3,5 +3,8 @@
 /src/app/*.map
 /src/app/*/*.js
 /src/app/*/*.map
+<<<<<<< HEAD
 /src/app/*/*/*.js
 /src/app/*/*/*.map
+=======
+>>>>>>> origin/master
