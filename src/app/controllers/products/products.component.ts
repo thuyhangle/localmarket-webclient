@@ -45,7 +45,6 @@ export class ProductsComponent implements OnInit {
   //GET product by type
   getProductsByType(event, typeId) {
     event.preventDefault();
-    console.log(typeId);
     this.productsService.getProductsByType(typeId)
       .subscribe(
         data => this.data = data
@@ -53,7 +52,8 @@ export class ProductsComponent implements OnInit {
   }
 
   //DELETE products by type
-  deleteProductsByType(typeId) {
+  deleteProductsByType(event, typeId) {
+    event.preventDefault();
     this.productsService.deleteProductsByType(typeId);
   }
 
@@ -68,12 +68,14 @@ export class ProductsComponent implements OnInit {
   }
 
   //UPDATE product by Id
-  editProductById(productId, typeId, name, desc, price) {
+  editProductById(event, productId, typeId, name, desc, price) {
+    event.preventDefault();
     this.productsService.editProductById(productId, typeId, name, desc, price);
   }
 
   //DELETE product by Id
-  deleteProductById(productId) {
+  deleteProductById(event, productId) {
+    event.preventDefault();
     this.productsService.deleteProductById(productId);
   }
 
@@ -81,4 +83,3 @@ export class ProductsComponent implements OnInit {
   getProductsByUser() {
     this.productsService.getProductsByUser();
   }
-}

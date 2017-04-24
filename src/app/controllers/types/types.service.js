@@ -18,12 +18,12 @@ var TypesService = (function () {
         this.http = http;
     }
     //POST a type
-    TypesService.prototype.postProducts = function (name, desc) {
+    TypesService.prototype.postType = function (name, desc) {
         var body = JSON.stringify({ name: name, desc: desc });
         this.http.post(headers_2.url + 'types', body, { headers: headers_1.contentHeaders });
     };
     //GET types
-    TypesService.prototype.getProducts = function () {
+    TypesService.prototype.getTypes = function () {
         return this.http.get(headers_2.url + 'types')
             .map(function (res) { return res.json(); });
     };

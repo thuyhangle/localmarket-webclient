@@ -37,19 +37,20 @@ var UsersComponent = (function () {
             .subscribe(function (res) { return _this.res = res; });
     };
     //GET user profile
+    //NOT implemented
     UsersComponent.prototype.getUserProfile = function () {
         var _this = this;
         this.usersService.getUserProfile()
             .subscribe(function (res) { return _this.res = res; });
     };
     //GET user by Id
-    UsersComponent.prototype.getUserById = function (userId) {
+    UsersComponent.prototype.getUserById = function (event, userId) {
         var _this = this;
         this.usersService.getUserById(userId)
             .subscribe(function (res) { return _this.res = res; });
     };
     //DELETE user by Id
-    UsersComponent.prototype.deleteUserById = function (userId) {
+    UsersComponent.prototype.deleteUserById = function (event, userId) {
         this.usersService.getUserById(userId);
     };
     return UsersComponent;

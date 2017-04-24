@@ -25,9 +25,9 @@ export class UsersComponent implements OnInit {
   login() {
     let email = "test1@gmail.com";
     let password = "test1";
-  	let body = JSON.stringify({email,password});
+    let body = JSON.stringify({email,password});
     console.log(body);
-  	this.http.post('http://localhost:4000/login', body, {headers: contentHeaders})
+    this.http.post('http://localhost:4000/login', body, {headers: contentHeaders})
     .subscribe(
       res => this.res = res
       );
@@ -35,31 +35,30 @@ export class UsersComponent implements OnInit {
 
   //GET all user
   getUsers() {
-  	this.usersService.getUsers()
-  	  .subscribe(
+    this.usersService.getUsers()
+      .subscribe(
         res => this.res = res
       );
   }
 
   //GET user profile
+  //NOT implemented
   getUserProfile() {
-  	this.usersService.getUserProfile()
-  	  .subscribe(
+    this.usersService.getUserProfile()
+      .subscribe(
         res => this.res = res
       );
   }
 
   //GET user by Id
-  getUserById(userId) {
-  	this.usersService.getUserById(userId)
-  	  .subscribe(
+  getUserById(event, userId) {
+    this.usersService.getUserById(userId)
+      .subscribe(
         res => this.res = res
       );
   }
 
   //DELETE user by Id
-  deleteUserById(userId) {
-  	this.usersService.getUserById(userId);
+  deleteUserById(event, userId) {
+    this.usersService.getUserById(userId);
   }
-
-}
