@@ -3,6 +3,10 @@ h1, h2, h3, h4, h5 {
   color: #4aa33c;
 }
 
+a {
+  font-size: 150%;
+}
+
 nav {
-  background-color: green;
+  background-color: #94db8a;
 }

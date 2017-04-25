@@ -1,7 +1,16 @@
-<h1>Hello {{name}} tab bar bottom</h1>
-<nav class="card-panel">
+<!-- <div class="card-panel green">
   <a [routerLink]="['products']" routerLinkActive="active">Product</a>
   <a [routerLink]="['farm']" routerLinkActive="active">Farm</a>
   <a [routerLink]="['cart']" routerLinkActive="active">Cart</a>
   <a [routerLink]="['account']" routerLinkActive="active">Account</a>
-</nav>
+</div> -->
+
+<div class="card">
+  <div class="card-tabs">
+    <ul class="tabs tabs-fixed-width">
+      <li class="tab"><a class="green-text" [routerLink]="['products']" routerLinkActive="active">All Products</a></li>
+      <li class="tab"><a class="green-text" [routerLink]="['farm']" routerLinkActive="active">Farm</a></li>
+      <li class="tab"><a class="green-text" [routerLink]="['cart']" routerLinkActive="active">Cart</a></li>
+      <li class="tab"><a class="green-text" [routerLink]="['account']" routerLinkActive="active">Account</a></li>
+    </ul>
+</div>
