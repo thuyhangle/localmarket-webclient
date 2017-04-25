@@ -1,27 +1,29 @@
 <comp-tab></comp-tab>
 
-<h1>{{res | json}}</h1>
+<!-- <h1>{{res | json}}</h1>
+ --><!--
+<button (click)="getUsers()">Get all users</button> -->
 
-<button (click)="getUsers()">Get all users</button>
-<button (click)="logout()">Log out</button>
 
 <!--LOG IN-->
 <div class="signup center-block jumbotron">
   <h1>Log In</h1>
   <form role="form" (submit)="login($event, _email.value, _password.value)" autocomplete="false">
     <div class="form-group">
-      <label for="_email">_email</label>
-      <input type="text" #_email class="form-control" id="_email" placeholder="_email">
+      <label for="_email">Email</label>
+      <input type="text" #_email class="form-control" id="_email" placeholder="Email">
     </div>
     <div class="form-group">
-      <label for="_password">_password</label>
-      <input type="password" #_password class="form-control" id="_password" placeholder="_password">
+      <label for="_password">Password</label>
+      <input type="password" #_password class="form-control" id="_password" placeholder="Password">
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-default">Login</button>
   </form>
 </div>
-
-<!-- SIGN UP
+<!-- <div class="row right-align">
+<button class="btn" (click)="logout()">Log out</button>
+</div>
+ --><!-- SIGN UP
 <div class="signup center-block jumbotron">
   <h1>Sign up</h1>
   <form role="form" (submit)="signup($event, _email.value, _password.value)">
@@ -39,7 +41,7 @@
 -->
 
 <!--GET User by Id-->
-<div class="signup center-block jumbotron">
+<!-- <div class="signup center-block jumbotron">
   <h1>Get user by Id</h1>
   <form role="form" (submit)="getUserById($event, _get_userId.value)">
     <div class="form-group">
@@ -48,10 +50,10 @@
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
-</div>
+</div> -->
 
 <!--DELETE User by Id-->
-<div class="signup center-block jumbotron">
+<!-- <div class="signup center-block jumbotron">
   <h1>DELETE user by Id</h1>
   <form role="form" (submit)="deleteUserById($event, _delete_userId.value)">
     <div class="form-group">
@@ -61,3 +63,4 @@
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 </div>
+ -->

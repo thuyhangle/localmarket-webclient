@@ -27,4 +27,10 @@ export class AccountComponent implements OnInit {
       );
     }
   }
+
+  logout() {
+    localStorage.removeItem('currentUserId');
+    this.router.navigate(['/users']);
+  }
+
 }

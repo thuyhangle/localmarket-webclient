@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { Router } from '@angular/router';
 import 'rxjs/Rx';
 import { Observable } from 'rxjs/Observable';
 
@@ -9,7 +10,7 @@ import { url } from '../../components/common/headers';
 @Injectable()
 export class UsersService {
   res: any;
-  constructor(private http: Http) { }
+  constructor(private http: Http, private router: Router) { }
 
   //GET all user
   getUsers() {
@@ -27,6 +28,7 @@ export class UsersService {
           if (this.res._id) {
             let currentUserId = res.json()._id;
             localStorage.setItem('currentUserId', currentUserId);
+            this.router.navigate(['buyerPage/account']);
           }
           else console.log('error');
       }
@@ -38,7 +40,7 @@ export class UsersService {
     this.http.post(url+'signup/', body, {headers : contentHeaders})
       .subscribe(
         data => {
-            console.log(data.json());           
+            console.log(data.json());
         }
       );
   }
@@ -61,7 +63,7 @@ export class UsersService {
   	this.http.delete(url + 'users/' + userId)
       .subscribe(
         data => {
-            console.log(data.json());           
+            console.log(data.json());
         }
       );
   }
