@@ -24,9 +24,9 @@ export class UsersService {
       .subscribe(
       res => {
           this.res = res.json();
-          if (this.res.email) {
-            let currentUser = this.res;
-            localStorage.setItem('currentUser', JSON.stringify({currentUser}));
+          if (this.res._id) {
+            let currentUserId = res.json()._id;
+            localStorage.setItem('currentUserId', currentUserId);
           }
           else console.log('error');
       }
@@ -35,7 +35,7 @@ export class UsersService {
   //POST new user
   postUser(email, password) {
     let body = JSON.stringify({email, password});
-    this.http.post(url+'users/', body, {headers : contentHeaders})
+    this.http.post(url+'signup/', body, {headers : contentHeaders})
       .subscribe(
         data => {
             console.log(data.json());           
@@ -51,6 +51,7 @@ export class UsersService {
 
   //GET user by Id
   getUserById(userId) {
+    console.log(userId);
   	return this.http.get(url + 'users/' + userId)
   	  .map((res: Response) => res.json());
   }

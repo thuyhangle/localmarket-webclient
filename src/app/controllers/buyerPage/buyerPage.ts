@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'buyer-page',
   templateUrl: './buyerPage.html'
 })
-export class BuyerPage  {
+export class BuyerPage {
   name = 'Buyer Page';
 }

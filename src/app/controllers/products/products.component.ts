@@ -15,6 +15,7 @@ import { ProductsService } from './products.service';
 export class ProductsComponent implements OnInit {
   data = [];
   image : any;
+  list = [] || JSON.parse(localStorage.getItem('cart'));
   constructor(private productsService: ProductsService, private http: Http) { }
 
   ngOnInit() {
@@ -60,7 +61,6 @@ export class ProductsComponent implements OnInit {
   //GET product by Id
   getProductById(event, productId) {
     event.preventDefault();
-    console.log(productId);
     this.productsService.getProductById(productId)
       .subscribe(
         data => this.data = data
@@ -82,5 +82,12 @@ export class ProductsComponent implements OnInit {
   //GET products by User
   getProductsByUser() {
     this.productsService.getProductsByUser();
+  }
+
+  //Add to cart
+  addToCart(event, itemId) {
+    this.list.push (itemId);
+    localStorage.setItem('cart', JSON.stringify(this.list));
+    console.log(JSON.parse(localStorage.getItem('cart')));
   }
 }

@@ -4,12 +4,14 @@
     <td>user_id</td>
     <td>type_id</td>
     <td>pic</td>
+    <td></td>
   </tr>
   <tr *ngFor="let item of data">
     <td>{{item._id}}</td>
     <td>{{item.user_id}}</td>
     <td>{{item.type_id}}</td>
     <td><img [src]="item.image" /></td>
+    <td><button (click)="addToCart($event, item._id)">Add to cart</button></td>
   </tr>
 </table>
 

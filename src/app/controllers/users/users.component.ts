@@ -54,6 +54,7 @@ export class UsersComponent implements OnInit {
 
   //GET user by Id
   getUserById(event, userId) {
+    console.log(userId);
     this.usersService.getUserById(userId)
       .subscribe(
         res => this.res = res
