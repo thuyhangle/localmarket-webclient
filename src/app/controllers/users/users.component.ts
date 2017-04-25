@@ -27,7 +27,7 @@ export class UsersComponent implements OnInit {
   }
 
   logout() {
-    localStorage.removeItem('currentUser');
+    localStorage.removeItem('currentUserId');
     this.router.navigate(['/users']);
   }
 
