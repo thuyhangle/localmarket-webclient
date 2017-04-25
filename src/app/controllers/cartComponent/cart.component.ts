@@ -10,7 +10,7 @@ import { ProductsService } from '../products/products.service';
   providers: [ProductsService]
 })
 export class CartComponent implements OnInit {
-  list = JSON.parse(localStorage.getItem('cart'));
+  list = JSON.parse(localStorage.getItem('cart')) || [];
   data = [];
   itemList = [];
   constructor(private productsService: ProductsService, private router: Router, private http: Http) { }
@@ -33,6 +33,6 @@ export class CartComponent implements OnInit {
   }
   clearCart() {
   	this.itemList = [];
-    localStorage.setItem('cart', []);
+    localStorage.removeItem('cart');
   }
 }
