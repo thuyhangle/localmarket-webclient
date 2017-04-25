@@ -1,15 +1,23 @@
-<button (click)="clearCart()">Clear cart</button>
-<table>
-  <tr>
-    <td>id</td>
-    <td>user_id</td>
-    <td>type_id</td>
-    <td>pic</td>
-  </tr>
-  <tr *ngFor="let item of itemList">
-    <td>{{item._id}}</td>
-    <td>{{item.user_id}}</td>
-    <td>{{item.type_id}}</td>
-    <td><img [src]="item.image" /></td>
-  </tr>
-</table>
+
+<h4> My shopping Cart </h4>
+
+ <ul class="collection">
+    <li class="collection-item avatar"  *ngFor="let item of itemList">
+      <img [src]="item.image"  alt="" class="circle">
+      <span class="title">Item id: {{item._id}}</span>
+      <p>Seller ID: {{item.user_id}} <br>
+         Price: $
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">See more</i></a>
+    </li>
+  </ul>
+<div class="row">
+  <div class="col m6">
+    <button class="btn" (click)="clearCart()">Remove all products</button>
+  </div>
+  <div class="col m6 right-align">
+    <button type="" class="btn green">Check Out</button>
+  </div>
+</div>
+
+
